@@ -1,0 +1,51 @@
+# ZombiePig — new-player helper. Lives on survival only.
+# Talks through a localhost sidecar that spends grok-build weekly credits.
+# When remaining weekly credits drop below min-remaining-percent, canned lines.
+
+bot-name: ZombiePig
+hours-limit: 10
+sidecar-url: http://127.0.0.1:18787
+min-remaining-percent: 25
+
+join-delay-seconds: 12
+spawn-radius: 500
+stuck-seconds: 90
+stuck-max-items: 8
+
+cooldowns:
+  unsolicited-seconds: 90
+  death-seconds: 600
+  stuck-seconds: 1200
+  chat-help-seconds: 180
+  reply-seconds: 2
+
+disclaimer: "server bot, not a player. /msg ZombiePig for more. /zombiepig off to mute me."
+
+chat-help-patterns:
+  - "(?i)\\b(where (do|should) i go|what do i do|how do i start|what now|any tips)\\b"
+  - "(?i)\\b(is there |how (do|to) )?(tpa|sethome|/home|claims?|kits?)\\b"
+  - "(?i)\\b(where (to|do i) (build|base|live)|i('m| am) new|just joined)\\b"
+  - "(?i)\\b(x-?ray|pie.?ray|allowed|allowed here)\\b"
+
+canned:
+  join:
+    - "spawn will chew you up. walk out, punch wood, hide a hole. nobody is going to tpa you."
+    - "no /sethome, no /tpa, map does not reset. get out of spawn before you make anything you care about."
+    - "fresh? keep walking. hide a stash. do not tell chat your coords. people steal. that is the game."
+    - "leave the 0s. food, a bed, a hidden hole. pie-ray is fine. other xray is a ban."
+  death:
+    - "yeah spawn does that. run at day or just keep moving. bed before you get cocky."
+    - "respawn loop. punch wood on the way out and do not come back until you have a stash."
+    - "you died at spawn. that is normal here. next time leave."
+  stuck:
+    - "you have been hugging spawn. that is how you stay poor. pick a direction and walk."
+    - "standing here is bait. food, a hole, then distance."
+    - "spawn is content, not a starter base. go far."
+  chat:
+    - "no tpa, no home, no claims. walk far, hide chests, pie-ray is fine, other xray is a ban."
+    - "next is leave spawn, wood, food, bed, a hidden hole. do not share coords."
+    - "anarchy-ish. griefing is allowed. hide your stuff and do not trust kits at spawn."
+  reply:
+    - "hide your stuff. go far. do not trust kits at spawn. that is most of it."
+    - "no /sethome. no /tpa. map never resets. leave spawn."
+    - "wood, food, a bed, then distance. coords stay in your head."

@@ -1,0 +1,26 @@
+name: ZombiePig
+version: ${project.version}
+main: com.lawlessmc.zombiepig.ZombiePigPlugin
+api-version: '26.2'
+author: wilder0p
+description: New-player helper bot that PMs advice in the voice of AZPBMD chat.
+website: https://dontplaythisserver.com
+folia-supported: false
+
+commands:
+  zombiepig:
+    description: Mute, unmute, or check the new-player helper bot.
+    usage: /zombiepig [off|on|status|reload|test]
+    aliases: [zp, zombie-pig]
+    permission-message: You cannot do that.
+
+permissions:
+  zombiepig.use:
+    description: Opt out or back in.
+    default: true
+  zombiepig.admin:
+    description: Reload, status details, and test PMs.
+    default: op
+  zombiepig.bypass:
+    description: Never receive unsolicited ZombiePig PMs.
+    default: false

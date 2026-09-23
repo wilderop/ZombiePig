@@ -1,0 +1,18 @@
+[Unit]
+Description=ZombiePig grok-build sidecar (localhost chat + weekly credits)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=wilder0p
+Group=wilder0p
+WorkingDirectory=/mnt/pool/projects/ZombiePig/sidecar
+ExecStart=/usr/bin/python3 /mnt/pool/projects/ZombiePig/sidecar/zombiepigd.py
+Restart=always
+RestartSec=3
+Environment=HOME=/home/wilder0p
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
