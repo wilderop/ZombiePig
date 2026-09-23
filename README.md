@@ -1,3 +1,6 @@
+<!-- azpbmd-live -->
+**Live:** survival
+<!-- /azpbmd-live -->
 # ZombiePig
 
 Survival Paper plugin that PMs new players (under 10 hours) in the combined voice of AZPBMD public chat.
